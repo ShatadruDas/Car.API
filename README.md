@@ -5,4 +5,3 @@ Use Case is: An API to get diffrent dummy car details.
 
 This project is to for basic .Net Core API hands on learning.
 
-
