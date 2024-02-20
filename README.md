@@ -19,4 +19,3 @@ This project is a Car Details API built with .NET 6. It provides a robust and ef
 - Adding more complex queries for car details retrieval.
 
 This project is open for contributions! If you have suggestions or issues, feel free to open an issue or submit a pull request.
-
