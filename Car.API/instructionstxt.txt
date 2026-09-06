@@ -1,0 +1,25 @@
+﻿# Minikube runbook
+
+Run these commands from the repository root (`Car.API`). Docker Desktop must be
+running before starting Minikube.
+
+```powershell
+minikube start --driver=docker
+minikube image build -t carapi:latest .
+kubectl apply -f Car.API/deployment.yml
+kubectl apply -f Car.API/deployment.services.yml
+kubectl get pods
+minikube service carapi --url
+```
+
+Open the URL printed by `minikube service carapi --url`. The service uses
+NodePort `30080` and the deployment expects the local image tag `carapi:latest`.
+
+Useful commands:
+
+```powershell
+minikube dashboard
+kubectl logs deployment/carapi
+kubectl delete -f Car.API/deployment.services.yml
+kubectl delete -f Car.API/deployment.yml
+```
