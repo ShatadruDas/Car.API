@@ -1,0 +1,28 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: carapi
+spec:
+  selector:
+    matchLabels:
+      app: carapi
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: carapi
+    spec:
+      containers:
+        - name: carapi-ct-1        
+          image: carapi:latest
+          imagePullPolicy: Never
+          resources:
+            limits:
+              memory: "50Mi"
+              cpu: "50m"
+            requests:
+              memory: "20Mi"
+              cpu: "20m"
+          ports:
+          - containerPort: 80
+  
