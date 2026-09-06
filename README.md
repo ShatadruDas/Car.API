@@ -1,7 +1,9 @@
 # Car API
 
-A small ASP.NET Core Web API that returns generated car details. The project targets
-.NET 10 and is intended for learning, local API experimentation, Docker, and Minikube.
+A lightweight car information service built with .NET 10. The API provides
+generated vehicle details through a simple REST endpoint and includes
+Swagger documentation, Docker support, GitHub Actions CI, and Kubernetes deployment
+manifests for Minikube.
 
 ## Requirements
 
